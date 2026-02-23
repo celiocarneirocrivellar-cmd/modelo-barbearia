@@ -104,6 +104,6 @@ Especialização em páginas que convertem visitantes em clientes.
 ## 📬 Contato
 
 WhatsApp: (31) 99191-5667  
-Instagram: @seuusuario  
+Instagram: @celiorezendecarneiro  
 
 Solicite um orçamento personalizado.
