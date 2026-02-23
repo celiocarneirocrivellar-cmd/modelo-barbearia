@@ -1,0 +1,78 @@
+/* RESET BASICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+
+body {
+    background: #111;
+    color: white;
+}
+
+header {
+    background: url('../img/barbearia-banner.jpg') center/cover no-repeat;
+    height: 90vh;
+  /* background: url('https://images.pexels.com/photos/1813272/pexels-photo-1813272.jpeg') center/cover no-repeat; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 48px;
+  background: rgba(0,0,0,0.6);
+  padding: 10px 20px;
+}
+
+header p {
+  margin-top: 10px;
+  background: rgba(0,0,0,0.6);
+  padding: 5px 15px;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 15px 30px;
+  background: #15d803;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.servicos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #410136;
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+}
+
+
+.whatsapp-fixo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 20px;
+}
