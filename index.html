@@ -1,74 +1,110 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Duani Barbearia</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background: #f4f4f4;
-    }
-    header {
-      background: #111111;
-      color: white;
-      padding: 60px 20px;
-    }
-    h1 {
-      margin: 0;
-      font-size: 32px;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 15px 25px;
-      background: #028a34;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-    section {
-      padding: 40px 20px;
-    }
-    .servicos div {
-      margin: 15px 0;
-      font-size: 18px;
-    }
-    footer {
-      background: #00041a;
-      color: white;
-      padding: 20px;
-    }
-    .whatsapp-fixo {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: white;
-      padding: 15px;
-      border-radius: 50%;
-      font-size: 20px;
-      text-decoration: none;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barbearia Duani</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #111;
+  color: white;
+}
+
+header {
+  height: 90vh;
+  background: url('https://images.pexels.com/photos/1813272/pexels-photo-1813272.jpeg') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 48px;
+  background: rgba(0,0,0,0.6);
+  padding: 10px 20px;
+}
+
+header p {
+  margin-top: 10px;
+  background: rgba(0,0,0,0.6);
+  padding: 5px 15px;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 15px 30px;
+  background: #d4af37;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.servicos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #222;
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+}
+
+.whatsapp-fixo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 20px;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-  <h1>DUANI BARBEARIA</h1>
-  <p>Estilo, tradição e atendimento de verdade.</p>
-  <a class="btn" href="https://wa.me/553188317758">Agendar pelo WhatsApp</a>
+  <h1>Barbearia Duani</h1>
+  <p>Cortes modernos e atendimento premium</p>
+  <a class="btn" href="https://wa.me/5531988317758">Agendar Agora</a>
 </header>
 
 <section>
-  <h2>Serviços</h2>
+  <h2>Nossos Serviços</h2>
   <div class="servicos">
-    <div>Corte Masculino – R$ 35</div>
-    <div>Barba – R$ 25</div>
-    <div>Combo Corte + Barba – R$ 55</div>
+    <div class="card">
+      <h3>Corte Masculino</h3>
+      <p>R$ 35</p>
+    </div>
+    <div class="card">
+      <h3>Barba</h3>
+      <p>R$ 25</p>
+    </div>
+    <div class="card">
+      <h3>Combo</h3>
+      <p>R$ 50</p>
+    </div>
   </div>
 </section>
 
@@ -77,11 +113,7 @@
   <p>Rua Getúlio Oliveira Souza, 532 - Xangrilá Contagem</p>
 </section>
 
-<footer>
-  © 2026 Duani Barbearia
-</footer>
-
-<a class="whatsapp-fixo" href="https://wa.me/553188317758">💬</a>
+<a class="whatsapp-fixo" href="https://wa.me/5531988317758">W</a>
 
 </body>
 </html>
