@@ -1,148 +1,285 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Barbearia Duani em Contagem. Cortes modernos, barba, combo, pigmentação, sobrancelha e atendimento premium.">
-<title>Barbearia Duani | Estilo e Precisão</title>
 
-<link rel="stylesheet" href="css/style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Barbearia Duani em Contagem. Cortes modernos, barba, combo, pigmentação, sobrancelha e atendimento premium.">
+  <title>Barbearia Duani | Estilo e Precisão</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
-<button id="adminBtn" class="admin-btn">⚙</button>
-
-<div id="adminPanel" class="admin-panel">
-  <h3>Painel Administrativo</h3>
-  <div id="listaAgendamentos"></div>
-  <button onclick="limparAgendamentos()">Limpar Todos</button>
-  <button onclick="fecharAdmin()">Fechar</button>
-</div>
 <body>
-
-<header class="topo">
-  <div class="container">
-    <h1>Barbearia Duani</h1>
-    <nav>
-      <a href="#servicos">Serviços</a>
-      <a href="#galeria">Galeria</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#contato">Contato</a>
-    </nav>
+  <!-- LOADER -->
+  <div id="loader">
+    Carregando...
   </div>
-</header>
+  
+  <!-- BOTÃO ADMIN -->
+  <button id="adminBtn" class="admin-btn">⚙</button>
 
-<section class="hero">
-  <div class="overlay">
-    <h2>Eleve seu estilo ao próximo nível</h2>
-    <p>Cortes modernos • Atendimento premium • Experiência exclusiva</p>
-    <a class="btn-principal" href="https://wa.me/5531991915667">Agendar Agora</a>
+  <!-- PAINEL ADMIN -->
+  <div id="adminPanel" class="admin-panel">
+
+    <h3>Painel Administrativo</h3>
+    <div id="listaAgendamentos"></div>
+    <button onclick="limparAgendamentos()">Limpar Todos</button>
+    <button onclick="fecharAdmin()">Fechar</button>
   </div>
-</section>
 
-<section id="servicos" class="section">
-  <h2>Nossos Serviços</h2>
-
-  <div class="lista-servicos">
-    <div>
-      <h3>Cortes</h3>
-      <ul>
-        <li>Corte Masculino - R$35</li>
-        <li>Corte Degradê - R$40</li>
-        <li>Corte Infantil - R$30</li>
-        <li>Pezinho - R$10</li>
-        <li>Sobrancelha - R$15</li>
-        
-      </ul>
+  <!-- HEADER -->
+  <header class="topo">
+    <div class="container">
+      <h1>Barbearia Duani</h1>
+      <nav>
+        <a href="#servicos">Serviços</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
     </div>
+  </header>
 
-    <div>
-      <h3>Barba</h3>
-      <ul>
-        <li>Barba Tradicional - R$25</li>
-        <li>Barba + Toalha Quente - R$35</li>
-        <li>Pigmentação - R$20</li>
-      </ul>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="overlay">
+
+      <h2>
+        <span id="texto-animado"></span>
+      </h2>
+
+      <h2>Eleve seu estilo ao próximo nível</h2>
+      <p>Cortes modernos • Atendimento premium • Experiência exclusiva</p>
+      <a class="btn-principal" href="https://wa.me/5531991915667">Agendar Agora</a>
     </div>
+  </section>
 
-    <div>
-      <h3>Combos</h3>
-      <ul>
-        <li>Combo Corte + Barba - R$50</li>
-        <li>Combo Premium - R$60</li>
-      </ul>
+  <!-- SERVIÇOS -->
+  <section id="servicos" class="section">
+    <h2>Nossos Serviços</h2>
+
+    <div class="lista-servicos">
+      <div>
+        <h3>Cortes</h3>
+        <ul>
+          <li>Corte Masculino - R$35</li>
+          <li>Corte Degradê - R$40</li>
+          <li>Corte Infantil - R$30</li>
+          <li>Pezinho - R$10</li>
+          <li>Sobrancelha - R$15</li>
+
+        </ul>
+      </div>
+
+      <div>
+        <h3>Barba</h3>
+        <ul>
+          <li>Barba Tradicional - R$25</li>
+          <li>Barba + Toalha Quente - R$35</li>
+          <li>Pigmentação - R$20</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Combos</h3>
+        <ul>
+          <li>Combo Corte + Barba - R$50</li>
+          <li>Combo Premium - R$60</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Designer</h3>
+        <ul>
+          <li>Tintura - R$20</li>
+          <li>Luzes - R$35</li>
+          <li>Platinado - R$45</li>
+          <li>Relaxamento - R$25</li>
+        </ul>
+      </div>
     </div>
+  </section>
 
-    <div>
-      <h3>Designer</h3>
-      <ul>
-        <li>Tintura - R$20</li>
-        <li>Luzes - R$35</li>
-        <li>Platinado - R$45</li>
-        <li>Relaxamento - R$25</li>
-      </ul>
+  <!-- GALERIA -->
+  <section id="galeria" class="section dark">
+    <h2>Galeria de Trabalhos</h2>
+
+    <div class="galeria">
+      <img src="img/galeria1.jpg">
+      <img src="img/galeria2.jpg">
+      <img src="img/galeria3.jpg">
+      <img src="img/galeria4.jpg">
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="galeria" class="section dark">
-  <h2>Galeria de Trabalhos</h2>
+  <!-- SOBRE -->
+  <section id="sobre" class="section revelar">
+    <h2>Sobre Nós</h2>
+    <p>Há mais de 10 anos transformando autoestima através de estilo, técnica e atendimento diferenciado.</p>
+  </section>
 
-  <div class="galeria">
-    <img src="img/galeria1.jpg">
-    <img src="img/galeria2.jpg">
-    <img src="img/galeria3.jpg">
-    <img src="img/galeria4.jpg">
-  </div>
-</section>
+  <!-- CONTATO -->
+  <section id="contato" class="section dark">
+    <h2>Contato</h2>
+    <p>Rua Getúlio Oliveira Souza, 532 - Xangrilá - Contagem/MG</p>
+    <a class="btn-principal" href="https://wa.me/5531991915667">Falar no WhatsApp</a>
+  </section>
 
-<section id="sobre" class="section">
-  <h2>Sobre Nós</h2>
-  <p>Há mais de 10 anos transformando autoestima através de estilo, técnica e atendimento diferenciado.</p>
-</section>
+  <!-- AGENDAMENTO -->
+  <section id="agendamento" class="section">
+    <h2>Agende Seu Horário</h2>
 
-<section id="contato" class="section dark">
-  <h2>Contato</h2>
-  <p>Rua Getúlio Oliveira Souza, 532 - Xangrilá - Contagem/MG</p>
-  <a class="btn-principal" href="https://wa.me/5531991915667">Falar no WhatsApp</a>
-</section>
+    <div class="form-agendamento">
 
-<section id="agendamento" class="section">
-  <h2>Agende Seu Horário</h2>
+      <input type="text" id="nome" placeholder="Seu nome">
 
-  <div class="form-agendamento">
+      <input type="tel" id="telefone" placeholder="Seu telefone">
 
-    <input type="text" id="nome" placeholder="Seu nome">
+      <select id="servico">
+        <option value="">Selecione o Serviço</option>
+        <option value="Corte Masculino">Corte Masculino</option>
+        <option value="Barba">Barba</option>
+        <option value="Combo Corte + Barba">Combo Corte + Barba</option>
+        <option value="Pigmentação">Pigmentação</option>
+      </select>
 
-    <input type="tel" id="telefone" placeholder="Seu telefone">
+      <input type="date" id="data">
 
-    <select id="servico">
-      <option value="">Selecione o Serviço</option>
-      <option value="Corte Masculino">Corte Masculino</option>
-      <option value="Barba">Barba</option>
-      <option value="Combo Corte + Barba">Combo Corte + Barba</option>
-      <option value="Pigmentação">Pigmentação</option>
-    </select>
+      <select id="horario">
+        <option value="">Selecione o Horário</option>
+      </select>
 
-    <input type="date" id="data">
+      <button onclick="agendar()">Confirmar Agendamento</button>
 
-    <select id="horario">
-      <option value="">Selecione o Horário</option>
-    </select>
+      <p id="mensagem-confirmacao" class="confirmacao"></p>
 
-    <button onclick="agendar()">Confirmar Agendamento</button>
+    </div>
+  </section>
 
-    <p id="mensagem-confirmacao" class="confirmacao"></p>
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Barbearia Duani - Todos os direitos reservados</p>
+  </footer>
 
-  </div>
-</section>
+  <a class="whatsapp-fixo" href="https://wa.me/5531991915667">💬</a>
 
-<footer>
-  <p>© 2026 Barbearia Duani - Todos os direitos reservados</p>
-</footer>
+  <!-- SCRIPTS -->
+  <script src="js/script.js"></script>
 
-<a class="whatsapp-fixo" href="https://wa.me/5531991915667">💬</a>
+  <script>
 
-<script src="js/script.js"></script>
+    function revelarElementos() {
+
+      const elementos = document.querySelectorAll('.revelar');
+
+      const alturaTela = window.innerHeight;
+
+      elementos.forEach(el => {
+
+        const posicao = el.getBoundingClientRect().top;
+
+        if (posicao < alturaTela - 100) {
+
+          el.classList.add("ativo");
+
+        }
+
+      });
+
+    }
+
+    window.addEventListener("scroll", revelarElementos);
+
+  </script>
+
+  <script>
+
+    window.addEventListener("scroll", function () {
+
+      const topo = document.querySelector(".topo");
+
+      topo.classList.toggle("scrolled", window.scrollY > 50);
+
+    });
+
+  </script>
+
+  <script>
+
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+
+      card.addEventListener('mousemove', (e) => {
+
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateX = -(y - centerY) / 10;
+        const rotateY = (x - centerX) / 10;
+
+        card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+
+      });
+
+      card.addEventListener('mouseleave', () => {
+
+        card.style.transform = "rotateX(0) rotateY(0) scale(1)";
+
+      });
+
+    });
+
+  </script>
+
+  <script>
+
+    const textos = [
+      "Corte Premium",
+      "Barbearia de Alto Padrão",
+      "Estilo Masculino"
+    ];
+
+
+    let index = 0;
+
+    function trocarTexto() {
+
+      document.getElementById("texto-animado").innerText = textos[index];
+
+      index++;
+
+      if (index >= textos.length) {
+        index = 0;
+      }
+
+    }
+
+    setInterval(trocarTexto, 2500);
+
+    trocarTexto();
+
+  </script>
+
+  <script>
+
+    window.addEventListener("load", function () {
+
+      document.getElementById("loader").style.display = "none";
+
+    });
+
+  </script>
+
+
+
 </body>
+
 </html>
