@@ -1,3 +1,7 @@
+/* ============================= */
+/* RESET */
+/* ============================= */
+
 *{
     margin:0;
     padding:0;
@@ -5,10 +9,24 @@
     font-family:'Poppins', sans-serif;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
+/* ============================= */
+/* BODY */
+/* ============================= */
+
 body{
-    background:#111;
+    background:linear-gradient(-45deg,#000,#111,#1a1a1a,#000);
+    background-size:400% 400%;
+    animation:fundoAnimado 15s ease infinite;
     color:#fff;
 }
+
+/* ============================= */
+/* CONTAINER */
+/* ============================= */
 
 .container{
     max-width:1200px;
@@ -19,11 +37,20 @@ body{
     padding:20px;
 }
 
+/* ============================= */
+/* NAVBAR */
+/* ============================= */
+
 .topo{
-    background:#000;
     position:fixed;
     width:100%;
     z-index:1000;
+    transition:0.3s;
+}
+
+.topo.scrolled{
+    background:#000;
+    box-shadow:0 5px 20px rgba(0,0,0,0.5);
 }
 
 .topo h1{
@@ -35,16 +62,33 @@ body{
     color:#fff;
     margin-left:20px;
     text-decoration:none;
+    position:relative;
     transition:0.3s;
 }
 
-.topo nav a:hover{
-    color:#d4af37;
+.topo nav a::after{
+    content:"";
+    position:absolute;
+    width:0%;
+    height:2px;
+    left:0;
+    bottom:-5px;
+    background:#d4af37;
+    transition:0.3s;
 }
+
+.topo nav a:hover::after{
+    width:100%;
+}
+
+/* ============================= */
+/* HERO */
+/* ============================= */
 
 .hero{
     height:100vh;
     background:url('../img/banner.jpg') center/cover no-repeat;
+    background-attachment:fixed;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -61,6 +105,10 @@ body{
     margin-bottom:20px;
 }
 
+/* ============================= */
+/* BOTÕES */
+/* ============================= */
+
 .btn-principal{
     display:inline-block;
     padding:12px 25px;
@@ -69,12 +117,18 @@ body{
     font-weight:600;
     text-decoration:none;
     border-radius:5px;
-    transition:0.3s;
+    transition:all 0.3s ease;
 }
 
 .btn-principal:hover{
     background:#fff;
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.5);
 }
+
+/* ============================= */
+/* SEÇÕES */
+/* ============================= */
 
 .section{
     padding:80px 20px;
@@ -85,24 +139,43 @@ body{
     background:#1a1a1a;
 }
 
-.cards{
-    display:flex;
-    gap:20px;
-    justify-content:center;
-    flex-wrap:wrap;
-    margin-top:40px;
-}
+/* ============================= */
+/* CARDS */
+/* ============================= */
 
 .card{
     background:#222;
     padding:25px;
     width:280px;
     border-radius:10px;
-    transition:0.3s;
+    transition:all 0.4s ease;
+    position:relative;
+    overflow:hidden;
 }
 
 .card:hover{
-    transform:translateY(-8px);
+    transform:translateY(-12px) scale(1.03);
+    box-shadow:0 20px 50px rgba(0,0,0,0.7);
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(212,175,55,0.4),
+        transparent
+    );
+    transition:0.5s;
+}
+
+.card:hover::before{
+    left:100%;
 }
 
 .destaque{
@@ -115,23 +188,9 @@ body{
     margin:10px 0;
 }
 
-footer{
-    background:#000;
-    padding:20px;
-    text-align:center;
-}
-
-.whatsapp-fixo{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25d366;
-    color:#fff;
-    padding:15px;
-    border-radius:50%;
-    text-decoration:none;
-    font-size:20px;
-}
+/* ============================= */
+/* SERVIÇOS */
+/* ============================= */
 
 .lista-servicos{
     display:flex;
@@ -146,6 +205,12 @@ footer{
     padding:25px;
     border-radius:10px;
     width:300px;
+    transition:all 0.35s ease;
+}
+
+.lista-servicos div:hover{
+    transform:translateY(-10px);
+    box-shadow:0px 15px 40px rgba(0,0,0,0.5);
 }
 
 .lista-servicos h3{
@@ -160,6 +225,10 @@ footer{
 .lista-servicos li{
     margin-bottom:8px;
 }
+
+/* ============================= */
+/* GALERIA */
+/* ============================= */
 
 .galeria{
     display:grid;
@@ -178,34 +247,10 @@ footer{
     transform:scale(1.05);
 }
 
-.form-agendamento{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-    max-width:400px;
-    margin:40px auto;
-}
+/* ============================= */
+/* FORMULÁRIO */
+/* ============================= */
 
-.form-agendamento select,
-.form-agendamento input{
-    padding:12px;
-    border-radius:5px;
-    border:none;
-    font-size:16px;
-}
-
-.form-agendamento button{
-    padding:12px;
-    background:#d4af37;
-    border:none;
-    font-weight:600;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-.form-agendamento button:hover{
-    background:#fff;
-}
 .form-agendamento{
     display:flex;
     flex-direction:column;
@@ -240,6 +285,55 @@ footer{
     color:#d4af37;
     font-weight:600;
 }
+
+/* ============================= */
+/* WHATSAPP */
+/* ============================= */
+
+.whatsapp-fixo{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25d366;
+    color:#fff;
+    padding:15px;
+    border-radius:50%;
+    text-decoration:none;
+    font-size:20px;
+    animation:pulse 2s infinite;
+}
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+footer{
+    background:#000;
+    padding:20px;
+    text-align:center;
+}
+
+/* ============================= */
+/* LOADER */
+/* ============================= */
+
+#loader{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:24px;
+    color:#d4af37;
+    z-index:5000;
+}
+
+/* ============================= */
+/* ADMIN PANEL */
+/* ============================= */
+
 .admin-btn{
   position:fixed;
   top:10px;
@@ -282,4 +376,33 @@ footer{
   background:#d4af37;
   border:none;
   cursor:pointer;
+}
+
+/* ============================= */
+/* ANIMAÇÕES */
+/* ============================= */
+
+@keyframes fundoAnimado{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+@keyframes pulse{
+0%{box-shadow:0 0 0 0 rgba(37,211,102,0.7);}
+70%{box-shadow:0 0 0 20px rgba(37,211,102,0);}
+100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
+}
+
+/* animação revelar */
+
+.revelar{
+    opacity:0;
+    transform:translateY(40px);
+    transition:0.8s ease;
+}
+
+.revelar.ativo{
+    opacity:1;
+    transform:translateY(0);
 }
